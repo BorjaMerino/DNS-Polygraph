@@ -33,7 +33,7 @@ An unethical technique used by certain ISP is to redirect DNS requests for non-e
 ![alt text](https://1.bp.blogspot.com/-eN4ip_V0AGU/XCOBsGZYh_I/AAAAAAAANzY/uPePfFr5-ooVegzdtZcKxKKS1_UHT7B_QCLcBGAs/s1600/dnschef_nxdomain.PNG "DNSChef NXdomain")
 ![alt text](https://4.bp.blogspot.com/-U1urj9k0Bvk/XCOBsA9yOlI/AAAAAAAANzc/y-dp0mqlDAI9EzQptvY1oLw3cNxVeySxgCEwYBhgL/s1600/nxdomain.PNG "DNS Polygraph NXdomain")
 
-Some considerations:
+**Some considerations:**
 
 * Currently the tool is not very stable and the code is quite ugly; my initial intention was to create a funtional tool for personal use without looking at the performance. If I have time I will try to improve it.
 * By selecting the "Passive" option no DoH requests will be done, so you just get the untrusted responses of your resolver. This is useful if you just want to monitor the DNS your host makes in a passive way (for example, for malware purposes).
@@ -42,5 +42,8 @@ Some considerations:
 * The Whois service used is http://ip-api.com. The limit of this service is 150 requests per minute. Be careful if you have selected the checkbox "Automatic Whois for Unrelated" to not go over this limit or your IP will be blackholed.
 * This tool is oriented to study DNS responses from your resolver in search of anomalies/attacks, not  to prevent techniques like the ones described above. To prevent this attacks use DNSSEC or configure a client to route all your queries via HTTPS.
 
+**Future ideas**
 
-
+* Tagging of malicious domains.
+* Consider other DNS type records like: MX, AAAA, etc.
+* Add more intelligence for *unrelated* responses
