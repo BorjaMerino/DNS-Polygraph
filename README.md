@@ -42,7 +42,7 @@ An unethical technique used by certain ISP is to redirect DNS requests for non-e
 * The Whois service used is http://ip-api.com. The limit of this service is 150 requests per minute. Be careful if you have selected the checkbox "Automatic Whois for Unrelated" to not go over this limit or your IP will be blackholed.
 * This tool is oriented to study DNS responses from your resolver in search of anomalies/attacks, not  to prevent techniques like the ones described above. To prevent this attacks use DNSSEC or configure a client to route all your queries via HTTPS.
 
-**Future ideas**
+**Future ideas:**
 
 * Tagging of malicious domains.
 * Consider other DNS type records like: MX, AAAA, etc.
