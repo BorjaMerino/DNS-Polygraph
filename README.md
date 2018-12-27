@@ -15,7 +15,7 @@ Both responses (*trusted* and *unstrusted*) will be compared and, if they do not
 
 Organizing the answers in this way saves a lot of work, allowing you to focus only on the apparently unrelated responses.
 
-The graphical interface of the application is shown below.  You just have to select the network interface and click on the Capture button. After clearing the cache DNS it will start getting the responses from your resolver.  The datagrid columns are self-explanatory except perhaps the one called **"R"**. This indicates the DoH resolver selected (G form Google and C for CloudFlare). Here an example:
+The graphical interface of the application is shown below.  You just have to select the network interface and click on the Capture button. After clearing the cache DNS it will start getting the responses from your resolver.  The datagrid columns are self-explanatory except perhaps the one called **"R"**. This indicates the DoH resolver selected (*G* for Google and *C* for CloudFlare). Here an example:
 
 ![alt text](https://2.bp.blogspot.com/-nIslM3PdD-E/XCNnU7tiYZI/AAAAAAAANyY/QW6__a9m80MsDooUmV3h6DplCdaBEmD7gCLcBGAs/s1600/DSN%2BPolygraph%2BMain.png "DNS Polygraph")
 
@@ -33,10 +33,14 @@ An unethical technique used by certain ISP is to redirect DNS requests for non-e
 ![alt text](https://1.bp.blogspot.com/-eN4ip_V0AGU/XCOBsGZYh_I/AAAAAAAANzY/uPePfFr5-ooVegzdtZcKxKKS1_UHT7B_QCLcBGAs/s1600/dnschef_nxdomain.PNG "DNSChef NXdomain")
 ![alt text](https://4.bp.blogspot.com/-U1urj9k0Bvk/XCOBsA9yOlI/AAAAAAAANzc/y-dp0mqlDAI9EzQptvY1oLw3cNxVeySxgCEwYBhgL/s1600/nxdomain.PNG "DNS Polygraph NXdomain")
 
-* Currently the tool is not very stable and the code is quite ugly; I created it only for persononal use without looking at the performance. If I have time I will try to improve it.
+Some considerations:
+
+* Currently the tool is not very stable and the code is quite ugly; my initial intention was to create a funtional tool for personal use without looking at the performance. If I have time I will try to improve it.
 * By selecting the "Passive" option no DoH requests will be done, so you just get the untrusted responses of your resolver. This is useful if you just want to monitor the DNS your host makes in a passive way (for example, for malware purposes).
 * An IP marked as "Unrelated" (grey color) does not necessarily mean that there is a DNS-related attack but that the response should be investigated more thoroughly. In fact, you will receive many responses of this type due to things like CDN, companies with multiple IP ranges, balancers, etc.
 * For now the tool only considers A Records with just one IP. If there are multiple IPs, it will only check if they match with those recovered via DoH. So more work needs to be done in this aspect.
 * The Whois service used is http://ip-api.com. The limit of this service is 150 requests per minute. Be careful if you have selected the checkbox "Automatic Whois for Unrelated" to not go over this limit or your IP will be blackholed.
-* This tool is obviously oriented to study DNS responses in search of anomalies/attacks, not  to prevent attacks like the ones described above. To prevent this attacks use DNSSEC or configure a client to route all your queries via HTTPS.
+* This tool is oriented to study DNS responses from your resolver in search of anomalies/attacks, not  to prevent techniques like the ones described above. To prevent this attacks use DNSSEC or configure a client to route all your queries via HTTPS.
+
+
 
