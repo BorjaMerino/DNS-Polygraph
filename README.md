@@ -23,7 +23,7 @@ Note that the tool will also highlight, with a dark blue color, when a new resol
 
 ![alt text](https://2.bp.blogspot.com/-sBwc2JVDTnI/XCN94TOhwwI/AAAAAAAANy8/WU81mNpv7hAyZvJk2EWC_PDNKySFbFQkwCLcBGAs/s1600/DNS%2BPolygraph%2BWhois.png "DNS Polygraph Whois")
 
-Apart from the previous criteria I have configured some rules to identify certain types of DNS poisoning related attacks. For example, if an unstrusted response corresponds to a private IP and the domain resolves, via DoH, to a public IP, this could mean a potential Local DNS Spoof attack. If this happens, this entry will be shown in red. Lets force this case with [DNSChef](https://github.com/iphelix/dnschef) to see how DNS Polygraph would show it.
+Apart from the previous criteria there are configured some rules to identify certain types of DNS poisoning related attacks. For example, if an unstrusted response corresponds to a private IP and the domain resolves, via DoH, to a public IP, this could mean a potential Local DNS Spoof attack. If this happens, this entry will be shown in red. Lets force this case with [DNSChef](https://github.com/iphelix/dnschef) to see how DNS Polygraph would show it.
 
 ![alt text](https://2.bp.blogspot.com/-t8iHByaWzZQ/XCODz2CbzMI/AAAAAAAAN0M/6-XUaLxTRg40sM5sAzhtPdBYhGKuMYpxACLcBGAs/s1600/dnschef_local_spoof.PNG "DNSChef Local DNS Spoof")
 ![alt text](https://2.bp.blogspot.com/-ybO14103Jvo/XCODBKRxInI/AAAAAAAANz0/DXGtDRsBmxkGl1YitrOtPVovjksb0oYMQCLcBGAs/s1600/local_dns_spoof.PNG "DNS Polygraph Local DNS Spoof")
