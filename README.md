@@ -35,7 +35,7 @@ An unethical technique used by certain ISP is to redirect DNS requests for non-e
 
 **Some considerations:**
 
-* Currently the tool is not very stable and the code is quite ugly; my initial intention was to create a funtional tool for personal use without looking at the performance. If I have time I will try to improve it.
+* Currently the tool is not very stable and the code is quite ugly; my initial intention was to create a functional tool for personal use without looking at the performance. If I have time I will try to improve it.
 * By selecting the "Passive" option no DoH requests will be done, so you just get the untrusted responses of your resolver. This is useful if you just want to monitor the DNS your host makes in a passive way (for example, for malware purposes).
 * An IP marked as "Unrelated" (grey color) does not necessarily mean that there is a DNS-related attack but that the response should be investigated more thoroughly. In fact, you will receive many responses of this type due to things like CDN, companies with multiple IP ranges, balancers, etc.
 * For now the tool only considers A Records with just one IP. If there are multiple IPs, it will only check if they match with those recovered via DoH. So more work needs to be done in this aspect.
